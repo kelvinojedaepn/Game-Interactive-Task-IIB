@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm5i7nroivbvb"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_7t53c"]
+[ext_resource type="Texture2D" uid="uid://5drmn24g838v" path="res://buttonLarge.png" id="1_reuw0"]
+[ext_resource type="FontFile" uid="uid://dugakkt2udpcl" path="res://kenvector_future.ttf" id="2_t4fij"]
+[ext_resource type="Texture2D" uid="uid://cwqe8rfkn6f1p" path="res://02.jpg" id="3_emgya"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sl2em"]
+font = ExtResource("2_t4fij")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.00827)
+script = ExtResource("1_7t53c")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_emgya")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -72.0
+offset_right = 98.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_reuw0")
+
+[node name="Label" type="Label" parent="VBoxContainer/PlayBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -11.5
+offset_right = 27.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+label_settings = SubResource("LabelSettings_sl2em")
+
+[node name="ExitBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_reuw0")
+
+[node name="Label" type="Label" parent="VBoxContainer/ExitBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -11.5
+offset_right = 27.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+label_settings = SubResource("LabelSettings_sl2em")
+
+[connection signal="pressed" from="VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]

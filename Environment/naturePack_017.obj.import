@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnm6tsg4dt1n0"
+path="res://.godot/imported/naturePack_017.obj-0ac09b119ef890c8b00ee4ee438531a2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/naturePack_017.obj-0ac09b119ef890c8b00ee4ee438531a2.mesh"]
+
+source_file="res://Environment/naturePack_017.obj"
+dest_files=["res://.godot/imported/naturePack_017.obj-0ac09b119ef890c8b00ee4ee438531a2.mesh", "res://.godot/imported/naturePack_017.obj-0ac09b119ef890c8b00ee4ee438531a2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
